@@ -1,0 +1,25 @@
+<div style="margin: 20px auto;">
+
+  <form [formGroup]="AppareilForm" (ngSubmit)="onFormSubmit()">
+
+  <div class="card" >
+    <div class="card-body">
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control custom-input" placeholder="Label" aria-label="label" aria-describedby="basic-addon1" formControlName="label">
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control custom-input" placeholder="Description" aria-label="description" aria-describedby="basic-addon1" formControlName="description">
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control custom-input" placeholder="State" aria-label="state" aria-describedby="basic-addon1" formControlName="state">
+      </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+      <button class="btn btn-primary"  type="Submit">{{data ? 'Modifier' : 'Ajouter'}} </button>
+      <button class="btn btn-secondary ml-2"   type="button">Annuler</button>
+    </div>
+
+  </div>
+  </form>
+</div>

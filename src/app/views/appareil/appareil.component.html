@@ -1,0 +1,29 @@
+<div class="row my-3">
+  <div class="col-md-6">
+    <!-- Ajoutez le bouton "New" ici -->
+    <button class="btn btn-primary" (click)="openAddForm()">Nouveau</button>
+  </div>
+</div>
+
+<div class="row" *ngIf="categories.appareils">
+  <div class="col-md-6" *ngFor="let item of categories.appareils">
+    <div class="card border-primary mb-3">
+      <div class="card-header">
+        Appareil
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>label :</strong> {{item.label}} </li>
+          <li class="list-group-item"><strong>description :</strong> {{item.description}} </li>
+          <li class="list-group-item"><strong>state :</strong> {{item.state}} </li>
+
+          <li class="list-group-item text-center">
+            <!-- Ajoutez les boutons "Edit" et "Delete" ici -->
+            <button class="btn btn-primary mr-2" (click)="openEditForm(item)">Modifier</button>
+            <button class="btn btn-dark mr-2" >Supprimer</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
