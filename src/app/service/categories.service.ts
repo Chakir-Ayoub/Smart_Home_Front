@@ -10,6 +10,8 @@ export class CategoriesService {
 
   constructor(private _http:HttpClient) { }
 
+  categories:Number;
+
   GetAll():Observable<CategoriesModule[]>{
     return this._http.get<CategoriesModule[]>("http://localhost:8080/smart_home/categorie");
   }

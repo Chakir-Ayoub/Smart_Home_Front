@@ -7,5 +7,5 @@ export class AppareilModule {
          label:String;
          description:String;
          state:Boolean;
-
+         image:String;
  }

@@ -24,7 +24,7 @@ export class AppareilComponent implements OnInit {
   ngOnInit(): void {
     this._route.params.subscribe((params)=>{ this.categorie_Id =params['id'];});
     this.getById();
-
+  this.GetIdCategories();
   }
 
 
@@ -72,7 +72,7 @@ export class AppareilComponent implements OnInit {
       confirmButtonText: 'Oui, supprimez-la !'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.categoriesService.DeleteCategorie(id).subscribe(data => {
+        this.appareilService.DeleteAppareil(id).subscribe(data => {
           console.log(data);
           this.getById();
         });
@@ -86,5 +86,9 @@ export class AppareilComponent implements OnInit {
     })
   this.categoriesService.DeleteCategorie(id);
 
+  }
+
+  GetIdCategories(){
+    this.categoriesService.categories=this.categorie_Id;
   }
 }

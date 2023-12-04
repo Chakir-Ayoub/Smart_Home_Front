@@ -16,11 +16,11 @@
           <li class="list-group-item"><strong>label :</strong> {{item.label}} </li>
           <li class="list-group-item"><strong>description :</strong> {{item.description}} </li>
           <li class="list-group-item"><strong>state :</strong> {{item.state}} </li>
-
+            <li class="list-group-item"> <img [src]='item.image' alt="" srcset="" width="50%" height="50%"></li>
           <li class="list-group-item text-center">
             <!-- Ajoutez les boutons "Edit" et "Delete" ici -->
             <button class="btn btn-primary mr-2" (click)="openEditForm(item)">Modifier</button>
-            <button class="btn btn-dark mr-2" >Supprimer</button>
+            <button class="btn btn-dark mr-2" (click)="Delete(item.id)">Supprimer</button>
           </li>
         </ul>
       </div>
