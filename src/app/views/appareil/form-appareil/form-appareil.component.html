@@ -12,8 +12,17 @@
         <input type="text" class="form-control custom-input" placeholder="Description" aria-label="description" aria-describedby="basic-addon1" formControlName="description">
       </div>
       <div class="input-group mb-3">
-        <input type="text" class="form-control custom-input" placeholder="State" aria-label="state" aria-describedby="basic-addon1" formControlName="state" >
-      </div>
+        <div class="custom-control custom-radio" style="margin-left: 5%;">
+            <input type="radio" id="id_option_1" class="custom-control-input" formControlName="state" value="true" name="nom_du_groupe">
+            <label class="custom-control-label" for="id_option_1">On</label>
+        </div>
+
+        <div class="custom-control custom-radio" style="margin-left: 5%;">
+            <input type="radio" id="id_option_2" class="custom-control-input" formControlName="state" value="false" name="nom_du_groupe">
+            <label class="custom-control-label" for="id_option_2">Off</label>
+        </div>
+    </div>
+
       <div class="input-group mb-3">
         <input type="text" class="form-control custom-input" placeholder="image" aria-label="image" aria-describedby="basic-addon1" formControlName="image" >
       </div>
