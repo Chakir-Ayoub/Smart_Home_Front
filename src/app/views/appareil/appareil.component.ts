@@ -14,6 +14,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./appareil.component.css']
 })
 export class AppareilComponent implements OnInit {
+  test:boolean;
   constructor(
               private appareilService:AppareilService,
               private _route : ActivatedRoute,

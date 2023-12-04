@@ -5,14 +5,14 @@
   </div>
 </div>
 
-<div class="row" *ngIf="categories.appareils">
-  <div class="col-md-6" *ngFor="let item of categories.appareils">
-    <div class="card border-primary mb-3">
+<div class="row" *ngIf="categories.appareils" >
+  <div class="col-md-6" *ngFor="let item of categories.appareils" >
+    <div class="card border-primary mb-3" [ngStyle]="{'background-color': item.state ? 'green' : 'red'}" *ngIf="item.state !== undefined">
       <div class="card-header">
         Appareil
       </div>
-      <div class="card-body">
-        <ul class="list-group list-group-flush">
+      <div class="card-body" >
+        <ul class="list-group list-group-flush" >
           <li class="list-group-item"><strong>label :</strong> {{item.label}} </li>
           <li class="list-group-item"><strong>description :</strong> {{item.description}} </li>
           <li class="list-group-item"><strong>state :</strong> {{item.state}} </li>

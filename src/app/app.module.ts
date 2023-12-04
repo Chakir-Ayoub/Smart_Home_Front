@@ -13,7 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { BasicHightLightDirectiveDirective } from './directive/BasicHightLightDirective/basic-hight-light-directive.directive';
+import { BetterHightlightDirective } from './directive/BetterHightlightDirective/BetterHightlightDirective.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     CategoriesComponent,
     FormCategoriesComponent,
     AppareilComponent,
-    FormAppareilComponent
+    FormAppareilComponent,
+    BasicHightLightDirectiveDirective,
+    BetterHightlightDirective
   ],
   imports: [
     BrowserModule,
